@@ -45,9 +45,31 @@ overlay.addEventListener("click" , ()=>{
 
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
+let mixerPortfolio = mixitup('.work_container', {
+  selectors: {
+      target: '.work_card'
+  },
+  animation: {
+      duration: 300
+  }
+});
 
 /* Link active work */ 
+const workItems=document.querySelectorAll(".work_item")
+
+function removeAction() {
+  workItems.forEach(item =>{
+    item.classList.remove("active-work")
+  })
+}
+
+workItems.forEach(L =>{
+  L.addEventListener("click" ,(eo)=>{
+    removeAction()
+    eo.target.classList.add("active-work")
+    
+  })
+})
 
 
 /*=============== SWIPER TESTIMONIAL ===============*/
