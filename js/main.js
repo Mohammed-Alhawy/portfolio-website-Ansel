@@ -74,6 +74,35 @@ workItems.forEach(L =>{
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
+let swiperTestimonial = new Swiper(".testimonial_container", {
+  spaceBetween:30,
+  slidesPerView: 2,
+  autoplay: {
+    delay: 1800,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+  loop: true,
+
+  
+  breakpoints: {
+  
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+  },
+
+
+});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
