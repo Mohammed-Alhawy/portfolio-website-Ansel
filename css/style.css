@@ -570,7 +570,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .services_container{
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill , minmax(335px,1fr));
   gap: 20px;
   padding-top: 20px;
 }
@@ -865,6 +865,122 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 /*=============== CONTACT ===============*/
+.contact_container{
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+}
+
+.contact_content{
+  width: 40%;
+}
+
+.contact__title{
+  text-align: center;
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.contact_content .info{
+  display: grid;
+  gap: 1rem;
+}
+
+.contact_card{
+  background-color:var(--container-color) ;
+  padding: 1rem ;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.contact_card-icon {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact_card-title,
+.contact_card-data{
+  font-size: var(--small-font-size);
+}
+
+.contact_card-title{
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.contact_card-data{
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.contact__button{
+  color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.contact__button:hover .contact_button-icon{
+  animation: moveicon 0.7s linear infinite;
+}
+
+.contact_form-div{
+  position: relative;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+
+.contact_form-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-color-light);
+  background: none;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+.contact_form-tag{
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: 0.25rem;
+  background-color: var(--body-color);
+  z-index: 10;
+}
+
+.contact_form-area{
+  height: 11rem;
+}
+
+.contact_form-area textarea{
+  resize: none;
+}
+
+@media (max-width:700px){
+  .contact_container{
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+  }
+  .contact_content{
+    width: 60%;
+  }
+}
+
+
+@media (max-width:500px){
+  .contact_content{
+    width: 85%;
+  }
+}
 
 
 /*=============== SCROLL BAR ===============*/
@@ -884,10 +1000,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 @keyframes moveicon{
   0%,
   100%{
-    margin-left: 0;
+    transform: translateX(0);
   }
   50%{
-    margin-left: 5px ;
+    transform: translateX(0.25rem);
   }
   
 }
