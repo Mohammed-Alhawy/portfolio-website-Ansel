@@ -14,6 +14,7 @@ function  changeHeader () {
 window.addEventListener("scroll" , changeHeader)
 
 /*=============== SERVICES MODAL ===============*/
+
 const servicesModel=document.querySelectorAll(".services_model")
 const servicesButton=document.querySelectorAll(".services_button")
 const servicesModelClose =document.querySelectorAll(".services_model_close")
