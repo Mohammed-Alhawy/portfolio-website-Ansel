@@ -984,7 +984,54 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 /*=============== SCROLL BAR ===============*/
+  .footer{
+    background-color: var(--first-color);
+  }
 
+  .footer_container{
+    text-align: center;
+    padding: 2rem 0 6rem;
+  }
+
+.footer_title,
+.footer_link{
+  color: var(--body-color);
+}
+
+.footer_title{
+  margin-bottom: 2rem;
+}
+
+.footer_list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_list li{
+  padding: 0 1rem 1rem;
+  font-size: 1.1rem;
+  font-weight: var(--font-medium);
+  margin-bottom: 1.5rem;
+}
+
+.footer_social_link{
+  background-color: var(--body-color);
+  color: var(--first-color);
+  padding: 0.3rem ;
+  margin: 0 1rem;
+  border-radius: 0.3rem;
+  /* display: inline-flex; */
+}
+
+
+.footer_copy{
+  display: block;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--container-color);
+
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
