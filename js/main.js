@@ -106,10 +106,62 @@ let swiperTestimonial = new Swiper(".testimonial_container", {
 });
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
 
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector(".nav_item a[href*=" + sectionId + "]").classList.add("active-link");
+    } else {
+      document.querySelector(".nav_item a[href*=" + sectionId + "]").classList.remove("active-link");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);
 
 /*=============== LIGHT DARK THEME ===============*/ 
 
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const dayNight=document.querySelector(".change-theme")
+const body = document.body;
+
+
+if (localStorage.getItem("theme") === "light") {
+  body.classList.add("light");
+
+  dayNight.classList.remove("bxs-sun")
+  dayNight.classList.add("bx-moon")
+
+
+
+}else{
+  dayNight.classList.remove("bx-moon")
+  dayNight.classList.add("bxs-sun")
+
+
+
+}
+
+dayNight.addEventListener("click", () => {
+  body.classList.toggle("light");
+
+  if (body.classList.contains("light")) {
+      localStorage.setItem("theme", "light");
+
+      dayNight.classList.remove("bxs-sun")
+      dayNight.classList.add("bx-moon")
+  } else {
+      localStorage.setItem("theme", "dark");
+      
+      dayNight.classList.remove("bx-moon")
+      dayNight.classList.add("bxs-sun")
+  }
+});
 
